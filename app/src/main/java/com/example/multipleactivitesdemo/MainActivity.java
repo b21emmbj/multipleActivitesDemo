@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("!", "Onclick detected");
                 Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
                 startActivity(intent);
+                Log.d("==>", "Intent worked." );
             }
+
         });
     }
 }
