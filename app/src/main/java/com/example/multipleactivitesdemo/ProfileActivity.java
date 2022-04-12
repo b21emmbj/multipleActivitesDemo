@@ -2,6 +2,7 @@ package com.example.multipleactivitesdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +41,13 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         signout = findViewById(R.id.signout_button);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+
+        String username = extras.getString("username");
+        Log.d("==>", "username from intent:" + username);
+
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
